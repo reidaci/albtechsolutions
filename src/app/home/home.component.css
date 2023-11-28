@@ -1,0 +1,28 @@
+.card-title{
+  color: black;
+  font-family: 'Roboto Slab', serif;
+}
+
+.card-text {
+color: black;
+font-family: 'Roboto Slab', serif;
+}
+
+
+
+.card {
+  border: none;
+  overflow: hidden;
+}
+
+.card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
+.card, .card-img {
+  border-radius: 0;
+}

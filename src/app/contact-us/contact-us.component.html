@@ -1,0 +1,127 @@
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary" >
+  <div class="container-fluid">
+    <a class="navbar-brand" [routerLink]="['/home']" >Home</a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-link active" aria-current="page" [routerLink]="['/about-us']">About Us</a>
+      <a class="nav-link" [routerLink]="['/contact-us']">Contact Us</a>
+    </div>
+  </div>
+</div>
+</nav>
+
+<div class="card-img" style="background-image: url('./assets/contactus.png' ); background-position: center center; background-size: cover; background-repeat: no-repeat; height: calc(100vh - 56px);">
+  <!-- <img src="./assets/contactus.png" class="card-img" > -->
+<div class="col col-12 page-wrapper" id="page-top">
+
+  <div class="col-12 section page-section page-banner dark-bg">
+    <div class="container" style="display: flex; align-items: center; height: 100%">
+      <div class="col-6 offset-6 animation-slide-bottom-large">
+        <h1 class="section_heading large-heading">
+          Contact Us
+        </h1>
+        <p class="section_subheading">
+
+Get in touch with our team.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col col-12 section">
+    <div class="container">
+      <div class="row gx-3">
+        <div class="col col-12 col-md-6 px-3">
+          <form class="contact-form" #contactForm="ngForm" (ngSubmit)="addContactDocumment(contactForm)">
+            <div class="row g-3">
+              <div class="col col-12 col-md-6 px-md-3 form-elem">
+                <label for="inputName" class="form-label" style="color: white;">Name</label>
+                <input type="text" id="inputName" class="form-control" required [(ngModel)]="contact.name" name="name"
+                  #name="ngModel" />
+                <!-- <span [hidden]="name.valid || name.pristine" class="alert alert-danger"></span> -->
+              </div>
+              <div class="col col-12 col-md-6 px-md-3 form-elem">
+                <label for="inputLastName" class="form-label" style="color: white;">Surname</label>
+                <input type="text" id="inputLastName" class="form-control" required [(ngModel)]="contact.lastname"
+                  name="lastname" #lastname="ngModel" />
+                <!-- <span [hidden]="lastname.valid || lastname.pristine" class="alert alert-danger"></span> -->
+              </div>
+              <div class="col col-12 px-md-3 form-elem">
+                <label for="inputEmail" class="form-label" style="color: white;">E-mail</label>
+                <input type="email" id="inputEmail" class="form-control" required
+                  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" [(ngModel)]="contact.email" name="email"
+                  #email="ngModel" />
+                <!-- <span [hidden]="contact.email?.length || email.pristine" class="alert alert-danger">L'e-mail è
+                  obbligatorio!</span> -->
+                <span [hidden]="
+                    !contact.email?.length || email.valid || email.pristine
+                  " class="alert alert-danger">The email format is incorrect!</span>
+              </div>
+              <div class="col col-12 px-md-3 form-elem">
+                <label for="inputSubject" class="form-label" style="color: white;">Subject</label>
+                <input type="text" id="inputSubject" class="form-control" required [(ngModel)]="contact.subject"
+                  name="subject" #subject="ngModel" />
+                <!-- <span [hidden]="subject.valid || subject.pristine" class="alert alert-danger">Soggetto è
+                  obbligatorio!</span> -->
+              </div>
+              <div class="col col-12 px-md-3 form-elem">
+                <label for="inputComments" class="form-label comments-label" style="color: white;">Your case</label>
+                <textarea cols="30" rows="9" id="inputComments" class="form-control" required placeholder=""
+                  [(ngModel)]="contact.comments" name="comments" #comments="ngModel"></textarea>
+                <!-- <span [hidden]="comments.valid || comments.pristine" class="alert alert-danger">Il messaggio è
+                  obbligatorio.</span> -->
+              </div>
+              <div class="col-12 px-md-3">
+                <button type="submit" data-bs-toggle="modal" data-bs-target="#contactConfirmationModal" style="color: white;"
+                  class="btn submit-form" [disabled]="contactForm.invalid">
+                  Send
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <div class="col col-12 col-md-6 px-3 mt-5 mt-md-0">
+          <h5 style="color: white;"><strong>Alb Tech Solution</strong></h5>
+
+          <!-- <p>Via....</p> -->
+          <p>
+            <b style="color: white;">Tel: </b> <a href="tel:+355675637864">+355675637864</a>
+            <!-- <b>Fax </b> <a href="tel:00390001122333">+39 000 11 22 333</a> -->
+          </p>
+          <p><b style="color: white;">Email: </b><a href="mailto:itservicesalb@outlook.com">itservicesalb@outlook.com</a></p>
+          <!-- <p>P. IVA 01010101010</p> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="contactConfirmationModal" tabindex="-1" role="dialog"
+  aria-labelledby="contactConfirmationModal" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">
+          Message delivered</h5>
+        <button type="button" class="btn close" data-bs-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+Your message has been sent successfully!
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success" data-bs-dismiss="modal">
+          OK
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
