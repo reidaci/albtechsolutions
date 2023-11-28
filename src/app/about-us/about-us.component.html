@@ -1,15 +1,51 @@
-
-<nav class="navbar navbar-expand-lg bg-body-tertiary" >
+<nav class="navbar navbar-expand-lg bg-body-tertiary" style="background: rgb(35,32,96);
+  background: linear-gradient(90deg, rgba(35,32,96,1) 0%, rgba(14,17,62,1) 100%, rgba(62,65,101,1) 100%, rgba(255,255,255,1) 100%);">
   <div class="container-fluid">
-    <a class="navbar-brand" [routerLink]="['/home']" >Home</a>
-  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav">
-      <a class="nav-link active" aria-current="page" [routerLink]="['/about-us']">About Us</a>
-      <a class="nav-link" [routerLink]="['/contact-us']">Contact Us</a>
+    <a class="navbar-brand" [routerLink]="['/home']">Home</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link active" aria-current="page" [routerLink]="['/about-us']">About Us</a>
+        <a class="nav-link" [routerLink]="['/contact-us']">Contact Us</a>
+      </div>
     </div>
   </div>
-</div>
 </nav>
+
+<!-- Bootstrap Carousel -->
+<div id="carouselExample" class="carousel slide crossfade" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="./assets/techhome.jpg" class="d-block w-100" alt="..." loading="lazy">
+      <div class="carousel-caption text-center">
+        <h5>Slide 1</h5>
+        <p>Your text goes here.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="./assets/techrobote.jpg" class="d-block w-100" alt="..." loading="lazy">
+      <div class="carousel-caption text-center">
+        <h5>Slide 1</h5>
+        <p>Your text goes here.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="./assets/worldtech.jpg" class="d-block w-100" alt="..." loading="lazy">
+      <div class="carousel-caption text-center">
+        <h5>Slide 1</h5>
+        <p>Your text goes here.</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>

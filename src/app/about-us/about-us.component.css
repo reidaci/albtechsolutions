@@ -1,0 +1,14 @@
+.crossfade .carousel-inner .carousel-item {
+  transition: opacity 0s ease-in-out;
+}
+
+.crossfade .carousel-inner .carousel-item.active {
+  opacity: 1;
+}
+
+.crossfade .carousel-inner .carousel-item-next,
+.crossfade .carousel-inner .carousel-item-prev,
+.crossfade .carousel-inner .carousel-item.active.left,
+.crossfade .carousel-inner .carousel-item.active.right {
+  opacity: 0;
+}

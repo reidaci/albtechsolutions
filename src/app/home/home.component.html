@@ -1,5 +1,6 @@
 <!-- text-info -->
-<nav class="navbar navbar-expand-lg  " >
+<nav class="navbar navbar-expand-lg" style="background: rgb(35,32,96);
+background: linear-gradient(90deg, rgba(35,32,96,1) 0%, rgba(14,17,62,1) 100%, rgba(62,65,101,1) 100%, rgba(255,255,255,1) 100%);" >
   <div class="container-fluid">
     <a class="navbar-brand" [routerLink]="['/home']" >Home</a>
   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -21,21 +22,25 @@
     <p class="card-text">We manage your IT, so you can manage your business.</p>
 
 
-    <div class="card mb-3" style="max-width: 540px;">
+    <div class="card mb-3 rounded-circle" style="width: 540px; ">
       <div class="row g-0">
-        <div class="col-md-4">
-          <img src="./assets/techhome.jpg" class="img-fluid rounded-start" alt="...">
-        </div>
-        <div class="col-md-8">
-          <div class="card-body">
-            <h5 class="card-title">IT Consulting & Advisory</h5>
-            <p class="card-text">We offer affordable IT solutions that help you reduce costs and improve your bottom line.</p>
-           <button> <p class="card-text"><small class="text-body-secondary" [routerLink]="['/contact-us']">Contact Us</small></p> </button>
+          <div class="col-md-4">
+              <img src="./assets/techhome.jpg" class="img-fluid rounded-circle" alt="...">
           </div>
-        </div>
+          <div class="col-md-8">
+              <div class="card-body">
+                  <h5 class="card-title">IT Consulting & Advisory</h5>
+                  <p class="card-text">We offer affordable IT solutions that help you reduce costs and improve your bottom line.</p>
+                  <button>
+                      <p class="card-text"><small class="text-body-secondary" [routerLink]="['/contact-us']">Contact Us</small></p>
+                  </button>
+              </div>
+          </div>
       </div>
-    </div>
-    <div class="card mb-3" style="max-width: 540px;">
+  </div>
+
+
+    <div class="card mb-3" style="max-width: 540px; border-radius: 50%;" id="secondimg" >
       <div class="row g-0">
         <div class="col-md-4">
           <img src="./assets/techrobote.jpg" class="img-fluid rounded-start" alt="...">
@@ -49,7 +54,7 @@
         </div>
       </div>
     </div>
-    <div class="card mb-3" style="max-width: 540px;">
+    <div class="card mb-3" style="max-width: 540px; border-radius: 50%; ;" id="thirdimg"  >
       <div class="row g-0">
         <div class="col-md-4">
           <img src="./assets/worldtech.jpg" class="img-fluid rounded-start" alt="...">
