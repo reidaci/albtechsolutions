@@ -1,25 +1,31 @@
-<!-- text-info -->
-<nav class="navbar navbar-expand-lg" style="background: rgb(35,32,96);
-background: linear-gradient(90deg, rgba(35,32,96,1) 0%, rgba(14,17,62,1) 100%, rgba(62,65,101,1) 100%, rgba(255,255,255,1) 100%);" >
+<nav class="navbar navbar-expand-lg bg-body-tertiary" style="background-color: whitesmoke;">
   <div class="container-fluid">
-    <a class="navbar-brand" [routerLink]="['/home']" >Home</a>
-  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav">
-      <a class="nav-link active" aria-current="page" [routerLink]="['/about-us']">About Us</a>
-      <a class="nav-link" [routerLink]="['/contact-us']">Contact Us</a>
+
+    <img src="./assets/albtechlogo.png" height="30" width="30" style="margin-right: 10px;">
+
+    <a class="navbar-brand" [routerLink]="['/home']">Home</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link active" aria-current="page" [routerLink]="['/about-us']">About Us</a>
+        <a class="nav-link" [routerLink]="['/contact-us']">Contact Us</a>
+
+      </div>
     </div>
   </div>
-</div>
 </nav>
 
 <div class="card text-bg-dark">
   <img src="./assets/tech.png" class="card-img" >
   <div class="card-img-overlay">
-    <h5 class="card-title" style="color: black;">Alb Tech Soultions</h5>
-    <p class="card-text">We manage your IT, so you can manage your business.</p>
+    <h5 class="card-title" style="color: rgb(255, 255, 255);">Alb Tech Soultions</h5>
+    <p class="card-text" style="color: white;">We manage your IT, so you can manage your business.</p>
 
 
     <div class="card mb-3 rounded-circle" style="width: 540px; ">
