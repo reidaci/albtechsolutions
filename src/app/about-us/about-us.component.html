@@ -3,18 +3,28 @@
 
     <img src="./assets/albtechlogo.png" height="30" width="30" style="margin-right: 10px;">
 
-    <a class="navbar-brand" [routerLink]="['/home']">Home</a>
+    <div class="flags-container">
+     <button style="border: none;" (click)="switchLanguage('al')">
+
+       <img src="./assets/albania.png" height="50" width="50" style="margin-right: 10px;">
+      </button>
+      <button style="border: none;" (click)="switchLanguage('en')" >
+
+        <img src="./assets/united-kingdom.png" height="37" width="38" style="margin-right: 10px;">
+      </button>
+    </div>
+
+    <a class="navbar-brand" [routerLink]="['/home']">{{"Home" | translate}}</a>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
       aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-        <a class="nav-link active" aria-current="page" [routerLink]="['/about-us']">About Us</a>
-        <a class="nav-link" [routerLink]="['/contact-us']">Contact Us</a>
+        <a class="nav-link active" aria-current="page" [routerLink]="['/about-us']">{{"About Us" | translate}}</a>
+        <a class="nav-link" [routerLink]="['/contact-us']">{{"Contact Us" | translate}}</a>
       </div>
     </div>
   </div>

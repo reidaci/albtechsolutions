@@ -27,3 +27,13 @@
 .card, .card-img {
   border-radius: 0;
 }
+
+.navbar-nav {
+  margin-left: 0;
+  justify-content: flex-start;
+}
+
+.flags-container {
+  margin-left: auto;
+  justify-content: flex-end;
+}

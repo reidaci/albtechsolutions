@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-about-us',
@@ -6,5 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./about-us.component.css']
 })
 export class AboutUsComponent {
-
+  constructor(private translate: TranslateService) { }
+  switchLanguage(language: string) {
+    this.translate.use(language)
+  }
 }

@@ -3,18 +3,28 @@
 
     <img src="./assets/albtechlogo.png" height="30" width="30" style="margin-right: 10px;">
 
-    <a class="navbar-brand" [routerLink]="['/home']">Home</a>
+    <div class="flags-container">
+     <button style="border: none;" (click)="switchLanguage('al')">
+
+       <img src="./assets/albania.png" height="50" width="50" style="margin-right: 10px;">
+      </button>
+      <button style="border: none;" (click)="switchLanguage('en')">
+
+        <img src="./assets/united-kingdom.png" height="37" width="38" style="margin-right: 10px;">
+      </button>
+    </div>
+
+    <a class="navbar-brand" [routerLink]="['/home']">{{"Home" | translate}}</a>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
       aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-        <a class="nav-link active" aria-current="page" [routerLink]="['/about-us']">About Us</a>
-        <a class="nav-link" [routerLink]="['/contact-us']">Contact Us</a>
+        <a class="nav-link active" aria-current="page" [routerLink]="['/about-us']">{{"About Us" | translate}}</a>
+        <a class="nav-link" [routerLink]="['/contact-us']">{{"Contact Us" | translate}}</a>
       </div>
     </div>
   </div>
@@ -32,7 +42,7 @@
         </h1>
         <p class="section_subheading">
 
-Get in touch with our team.
+{{"Get in touch with our team." | translate}}
         </p>
       </div>
     </div>
@@ -45,13 +55,13 @@ Get in touch with our team.
           <form class="contact-form" #contactForm="ngForm" (ngSubmit)="addContactDocumment(contactForm)">
             <div class="row g-3">
               <div class="col col-12 col-md-6 px-md-3 form-elem">
-                <label for="inputName" class="form-label" style="color: white;">Name</label>
+                <label for="inputName" class="form-label" style="color: white;">{{"Name" | translate}}</label>
                 <input type="text" id="inputName" class="form-control" required [(ngModel)]="contact.name" name="name"
                   #name="ngModel" />
                 <!-- <span [hidden]="name.valid || name.pristine" class="alert alert-danger"></span> -->
               </div>
               <div class="col col-12 col-md-6 px-md-3 form-elem">
-                <label for="inputLastName" class="form-label" style="color: white;">Surname</label>
+                <label for="inputLastName" class="form-label" style="color: white;">{{"Surname" | translate}}</label>
                 <input type="text" id="inputLastName" class="form-control" required [(ngModel)]="contact.lastname"
                   name="lastname" #lastname="ngModel" />
                 <!-- <span [hidden]="lastname.valid || lastname.pristine" class="alert alert-danger"></span> -->
@@ -68,14 +78,14 @@ Get in touch with our team.
                   " class="alert alert-danger">The email format is incorrect!</span>
               </div>
               <div class="col col-12 px-md-3 form-elem">
-                <label for="inputSubject" class="form-label" style="color: white;">Subject</label>
+                <label for="inputSubject" class="form-label" style="color: white;">{{"Subject" | translate}}</label>
                 <input type="text" id="inputSubject" class="form-control" required [(ngModel)]="contact.subject"
                   name="subject" #subject="ngModel" />
                 <!-- <span [hidden]="subject.valid || subject.pristine" class="alert alert-danger">Soggetto è
                   obbligatorio!</span> -->
               </div>
               <div class="col col-12 px-md-3 form-elem">
-                <label for="inputComments" class="form-label comments-label" style="color: white;">Your case</label>
+                <label for="inputComments" class="form-label comments-label" style="color: white;">{{"Your case" | translate}}</label>
                 <textarea cols="30" rows="9" id="inputComments" class="form-control" required placeholder=""
                   [(ngModel)]="contact.comments" name="comments" #comments="ngModel"></textarea>
                 <!-- <span [hidden]="comments.valid || comments.pristine" class="alert alert-danger">Il messaggio è
@@ -84,7 +94,7 @@ Get in touch with our team.
               <div class="col-12 px-md-3">
                 <button type="submit" data-bs-toggle="modal" data-bs-target="#contactConfirmationModal" style="color: white;"
                   class="btn submit-form" [disabled]="contactForm.invalid">
-                  Send
+                  {{"Send" | translate}}
                 </button>
               </div>
             </div>

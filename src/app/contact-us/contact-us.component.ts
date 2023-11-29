@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { Contact } from '../models/contact.model';
 import { NgForm } from '@angular/forms';
 
+import { TranslateService } from '@ngx-translate/core';
+
 @Component({
   selector: 'app-contact-us',
   templateUrl: './contact-us.component.html',
@@ -10,16 +12,17 @@ import { NgForm } from '@angular/forms';
 export class ContactUsComponent {
   contact: Contact = { name: "", lastname: "", email: "", subject: "", comments: "" };
 
-  constructor() { }
+  constructor(private translate: TranslateService) { }
 
-  ngOnInit(): void {
+
+
+ switchLanguage(language: string) {
+    this.translate.use(language)
   }
-
   addContactDocumment(form: NgForm) {
     if (form.valid) {
       console.log(form.value);
       form.resetForm();
     }
   }
-
 }
