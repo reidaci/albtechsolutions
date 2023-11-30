@@ -3,16 +3,7 @@
 
     <img src="./assets/albtechlogo.png" height="30" width="30" style="margin-right: 10px;">
 
-    <div class="flags-container">
-     <button style="border: none;" (click)="switchLanguage('al')">
 
-       <img src="./assets/albania.png" height="50" width="50" style="margin-right: 10px;">
-      </button>
-      <button style="border: none;" (click)="switchLanguage('en')" >
-
-        <img src="./assets/united-kingdom.png" height="37" width="38" style="margin-right: 10px;">
-      </button>
-    </div>
 
     <a class="navbar-brand" [routerLink]="['/home']">{{"Home" | translate}}</a>
 
@@ -28,7 +19,17 @@
       </div>
     </div>
   </div>
+  <div class="flags-container">
+    <button style="border: none; " (click)="switchLanguage('al')">
+      <img src="./assets/albania.png" height="50" width="50" style="margin-right: 10px;">
+    </button>
+    <button style="border: none; " (click)="switchLanguage('en')">
+      <img src="./assets/united-kingdom.png" height="37" width="38" style="margin-right: 10px;">
+    </button>
+  </div>
+
 </nav>
+
 
 <!-- Bootstrap Carousel -->
 <div id="carouselExample" class="carousel slide crossfade" data-bs-ride="carousel">

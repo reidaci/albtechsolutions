@@ -54,8 +54,10 @@ font-family: 'Roboto Slab', serif;
 }
 
 .flags-container {
+  display: flex;
+  align-items: center;
   margin-left: auto;
-  justify-content: flex-end;
+  margin-left: 100px;
 }
 
 

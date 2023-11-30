@@ -3,16 +3,7 @@
 
     <img src="./assets/albtechlogo.png" height="30" width="30" style="margin-right: 10px;">
 
-    <div class="flags-container">
-     <button style="border: none;" (click)="switchLanguage('al')">
 
-       <img src="./assets/albania.png" height="50" width="50" style="margin-right: 10px;">
-      </button>
-      <button style="border: none;" (click)="switchLanguage('en')">
-
-        <img src="./assets/united-kingdom.png" height="37" width="38" style="margin-right: 10px;">
-      </button>
-    </div>
 
     <a class="navbar-brand" [routerLink]="['/home']">{{"Home" | translate}}</a>
 
@@ -28,9 +19,19 @@
       </div>
     </div>
   </div>
+  <div class="flags-container">
+    <button style="border: none; " (click)="switchLanguage('al')">
+      <img src="./assets/albania.png" height="50" width="50" style="margin-right: 10px;">
+    </button>
+    <button style="border: none; " (click)="switchLanguage('en')">
+      <img src="./assets/united-kingdom.png" height="37" width="38" style="margin-right: 10px;">
+    </button>
+  </div>
+
 </nav>
 
-<div class="card-img" style="background-image: url('./assets/contactus.png' ); background-position: center center; background-size: cover; background-repeat: no-repeat; height: calc(100vh - 56px);">
+
+<div class="card-img" style="background-image: url('./assets/contactus.png' ); background-position: center center; background-size: cover; background-repeat: no-repeat; height: calc(100vh - 50px);">
   <!-- <img src="./assets/contactus.png" class="card-img" > -->
 <div class="col col-12 page-wrapper" id="page-top">
 
