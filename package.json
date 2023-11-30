@@ -15,6 +15,7 @@
     "@angular/common": "^16.0.0",
     "@angular/compiler": "^16.0.0",
     "@angular/core": "^16.0.0",
+    "@angular/fire": "^16.0.0",
     "@angular/forms": "^16.0.0",
     "@angular/material": "^16.2.12",
     "@angular/platform-browser": "^16.0.0",
@@ -25,6 +26,7 @@
     "@ngx-translate/http-loader": "^8.0.0",
     "@popperjs/core": "^2.11.6",
     "bootstrap": "^5.2.3",
+    "firebase": "^10.7.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.13.0"
