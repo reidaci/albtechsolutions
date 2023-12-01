@@ -12,8 +12,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
-import {AngularFireModule} from '@angular/fire/compat'
+import {AngularFireModule, FirebaseApp} from '@angular/fire/compat'
 import { environment } from 'src/environments/environment';
+import {FirebaseTSFirestore} from 'firebasets/firebaseTSFirestore/firebaseTSFirestore'
+import { FirebaseTSApp } from 'firebasets/firebasetsApp/firebaseTSApp';
+
 
 
 @NgModule({
@@ -44,4 +47,9 @@ import { environment } from 'src/environments/environment';
   providers: [TranslateModule, HttpClient, HttpClientModule],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor() {
+
+    FirebaseTSApp.init(environment.firebase)
+  }
+ }
