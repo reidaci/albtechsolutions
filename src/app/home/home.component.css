@@ -1,32 +1,6 @@
-.card-title{
-  color: black;
-  font-family: 'Roboto Slab', serif;
-}
-
-.card-text {
-color: black;
-font-family: 'Roboto Slab', serif;
-}
-
-
-
-.card {
-  border: none;
-  overflow: hidden;
-
-}
-
-.card-img {
-  height: calc(100vh - 27px);
-  object-fit: cover;
-
-
-}
-
 .navbar-nav {
   margin-left: 0;
   justify-content: flex-start;
-
 }
 
 .flags-container {
@@ -36,7 +10,85 @@ font-family: 'Roboto Slab', serif;
   margin-left: 100px;
 }
 
-
-.card, .card-img {
+.card {
+  border: none;
   border-radius: 0;
+}
+
+.card-img {
+  border-radius: 0;
+  object-fit: cover;
+  height: calc(100vh - 68px);
+}
+
+.card-title,
+.card-text {
+  color: white;
+  font-family: 'Roboto Slab', serif;
+}
+
+
+
+/* E. M. */
+.custom-carts {
+  float: left;
+  height: calc(100% - 4*16px);
+}
+
+.custom-cart-wrapper {
+  position: relative;
+  float: left;
+  height: 100%;
+  /* background-color: rgba(255, 0, 0, 0.15); */
+}
+
+/* .custom-cart-wrapper:nth-child(2) {
+  background-color: rgba(0, 128, 0, 0.15);
+}
+
+.custom-cart-wrapper:nth-child(3) {
+  background-color: rgba(0, 0, 255, 0.15);
+} */
+
+.custom-cart {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* equals to 292px */
+  height: 292px;
+  /* same as width */
+  z-index: 1;
+  background-color: #006ab6;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+}
+
+.custom-cart#custom-cart-1 {
+  background-image: url('../../assets/techhome.jpg');
+}
+
+.custom-cart#custom-cart-2 {
+  top: initial;
+  bottom: 0;
+  background-image: url('../../assets/techrobote.jpg');
+}
+
+.custom-cart#custom-cart-3 {
+  top: 7%;
+  background-image: url('../../assets/worldtech.jpg');
+}
+
+.custom-cart-content-wrapper {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-shadow: 1px 1px 10px #000000;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
 }

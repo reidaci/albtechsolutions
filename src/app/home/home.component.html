@@ -19,73 +19,81 @@
       </div>
     </div>
   </div>
+
   <div class="flags-container">
-    <button style="border: none; " (click)="switchLanguage('al')">
+    <button style="border: none;" (click)="switchLanguage('al')">
       <img src="./assets/albania.png" height="50" width="50" style="margin-right: 10px;">
     </button>
-    <button style="border: none; " (click)="switchLanguage('en')">
+    <button style="border: none;" (click)="switchLanguage('en')">
       <img src="./assets/united-kingdom.png" height="37" width="38" style="margin-right: 10px;">
     </button>
   </div>
-
 </nav>
 
 
 
 <div class="card text-bg-dark">
-  <img src="./assets/tech.png" class="card-img" >
+  <img src="./assets/tech.png" class="card-img">
+
   <div class="card-img-overlay">
-    <h5 class="card-title" style="color: rgb(255, 255, 255);">Alb Tech Soultions</h5>
-    <p class="card-text" style="color: white;">{{"We manage your IT, so you can manage your business." | translate}}</p>
+    <h5 class="card-title">Alb Tech Soultions</h5>
+    <p class="card-text">{{"We manage your IT, so you can manage your business." | translate}}</p>
 
 
-    <div class="card mb-3 rounded-circle" style="width: 540px; ">
-      <div class="row g-0">
-          <div class="col-md-4">
-              <img src="./assets/techhome.jpg" class="img-fluid rounded-circle" alt="...">
+
+    <!-- E. M. -->
+    <div class="col-7 px-0 custom-carts">
+      <div class="col-4 px-0 custom-cart-wrapper">
+        <div class="card rounded-circle custom-cart" id="custom-cart-1">
+          <div class="col-12 px-0 custom-cart-content-wrapper">
+            <div class="card-body">
+              <h5 class="card-title">{{"IT Consulting & Advisory" | translate}}</h5>
+              <p class="card-text">{{"We offer affordable IT solutions that help you reduce
+                costs and improve your
+                bottom line." | translate}}</p>
+              <button>
+                <p class="card-text"><small class="text-body-secondary" [routerLink]="['/contact-us']">{{"Contact Us"
+                    | translate}}</small></p>
+              </button>
+            </div>
           </div>
-          <div class="col-md-8">
-              <div class="card-body">
-                  <h5 class="card-title">{{"IT Consulting & Advisory" | translate}}</h5>
-                  <p class="card-text">{{"We offer affordable IT solutions that help you reduce costs and improve your bottom line." | translate}}</p>
-                  <button>
-                      <p class="card-text"><small class="text-body-secondary" [routerLink]="['/contact-us']">Contact Us</small></p>
-                  </button>
-              </div>
-          </div>
-      </div>
-  </div>
-
-
-    <div class="card mb-3" style="max-width: 540px; border-radius: 50%;" id="secondimg" >
-      <div class="row g-0">
-        <div class="col-md-4">
-          <img src="./assets/techrobote.jpg" class="img-fluid rounded-start" alt="...">
         </div>
-        <div class="col-md-8">
-          <div class="card-body">
-            <h5 class="card-title">{{"Web Development" | translate}}</h5>
-            <p class="card-text">{{"We create dynamic and user-friendly websites through expert web development, combining innovative design with seamless functionality." | translate}}</p>
-            <button> <p class="card-text"><small class="text-body-secondary" [routerLink]="['/contact-us']">{{"Contact Us" | translate}}</small></p> </button>
+      </div>
+
+      <div class="col-4 px-0 custom-cart-wrapper">
+        <div class="card rounded-circle custom-cart" id="custom-cart-2">
+          <div class="col-12 px-0 custom-cart-content-wrapper">
+            <div class="card-body">
+              <h5 class="card-title">{{"Web Development" | translate}}</h5>
+              <p class="card-text">{{"We create dynamic and user-friendly websites through
+                expert web development,
+                combining innovative design with seamless functionality." | translate}}</p>
+              <button>
+                <p class="card-text"><small class="text-body-secondary" [routerLink]="['/contact-us']">{{"Contact Us"
+                    | translate}}</small></p>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-4 px-0 custom-cart-wrapper">
+        <div class="card rounded-circle custom-cart" id="custom-cart-3">
+          <div class="col-12 px-0 custom-cart-content-wrapper">
+            <div class="card-body">
+              <h5 class="card-title">{{"IT Helpdesk Support" | translate}}</h5>
+              <p class="card-text">{{"We deliver proficient and responsive IT help desk support
+                services to optimize
+                operations and elevate user satisfaction." | translate}}</p>
+              <button>
+                <p class="card-text"><small class="text-body-secondary" [routerLink]="['/contact-us']">{{"Contact Us"
+                    | translate}}</small></p>
+              </button>
+            </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="card mb-3" style="max-width: 540px; border-radius: 50%; ;" id="thirdimg"  >
-      <div class="row g-0">
-        <div class="col-md-4">
-          <img src="./assets/worldtech.jpg" class="img-fluid rounded-start" alt="...">
-        </div>
-        <div class="col-md-8">
-          <div class="card-body">
-            <h5 class="card-title">{{"IT Helpdesk Support" | translate}}</h5>
-            <p class="card-text">{{"We deliver proficient and responsive IT help desk support services to optimize operations and elevate user satisfaction." | translate}}</p>
-            <button> <p class="card-text"><small class="text-body-secondary" [routerLink]="['/contact-us']">{{"Contact Us" | translate}}</small></p> </button>
-          </div>
-        </div>
-      </div>
-    </div>
+
   </div>
 </div>
-
-
